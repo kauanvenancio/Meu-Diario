@@ -2,7 +2,7 @@
    LOGIN
 ====================== */
 
-const senhaCorreta = "1234";
+const senhaCorreta = "9879560";
 
 function fazerLogin() {
   const senha = document.getElementById("senhaInput").value;
@@ -183,3 +183,4 @@ function exportarBackup() {
 
   link.click();
 }
+
