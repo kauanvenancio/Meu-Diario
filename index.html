@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Blog Secreto 🌸</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOGIN -->
+  <div id="loginTela" class="loginBox">
+    <h1>🌙 Blog Secreto</h1>
+    <p>Digite a senha para entrar</p>
+
+    <input type="password" id="senhaInput" placeholder="Senha...">
+    <button onclick="fazerLogin()">Entrar</button>
+
+    <p id="erroLogin"></p>
+  </div>
+
+  <!-- BLOG -->
+  <div id="blogTela" style="display:none;">
+
+    <header>
+      <h1>Meu Cantinho de Poesias</h1>
+      <p>Um lugar delicado só meu</p>
+    </header>
+
+    <!-- MENU -->
+    <div class="menuTop">
+      <button class="menuBtn" onclick="mostrarSecao('poesias')">
+        🌸 Poesias
+      </button>
+
+      <button class="menuBtn" onclick="mostrarSecao('diario')">
+        📓 Diário
+      </button>
+    </div>
+
+    <main>
+
+      <!-- POESIAS -->
+      <section id="secaoPoesias">
+        <h2 class="tituloSecao">Minhas Poesias</h2>
+
+        <button class="btnAdd" onclick="abrirModalPoesia()">
+          + Nova Poesia
+        </button>
+
+        <button class="btnAdd" onclick="exportarBackup()">
+          💾 Exportar Backup
+        </button>
+
+        <div id="posts"></div>
+      </section>
+
+      <!-- DIARIO -->
+      <section id="secaoDiario" style="display:none;">
+        <h2 class="tituloSecao">Meu Diário</h2>
+
+        <button class="btnAdd" onclick="abrirModalDiario()">
+          + Nova Página
+        </button>
+
+        <div id="diarioPosts"></div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- MODAL POESIA -->
+  <div id="modalPoesia" class="modal">
+    <div class="modalBox">
+      <h2> Nova Poesia</h2>
+
+      <input type="text" id="tituloPoesia" placeholder="Título...">
+
+      <textarea id="textoPoesia" placeholder="Escreva sua poesia..."></textarea>
+
+      <button onclick="salvarPoesia()">Salvar</button>
+      <button onclick="fecharModalPoesia()">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- MODAL DIARIO -->
+  <div id="modalDiario" class="modal">
+    <div class="modalBox">
+      <h2>📓 Nova Página</h2>
+
+      <textarea id="textoDiario" placeholder="Escreva sobre seu dia..."></textarea>
+
+      <button onclick="salvarDiario()">Salvar</button>
+      <button onclick="fecharModalDiario()">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

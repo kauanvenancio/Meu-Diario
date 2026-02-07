@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: linear-gradient(to bottom, #fff0f5, #ffffff);
+  text-align: center;
+  color: #444;
+  padding: 10px;
+}
+
+/* LOGIN */
+.loginBox {
+  margin-top: 120px;
+}
+
+.loginBox input {
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 220px;
+  text-align: center;
+}
+
+.loginBox button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: pink;
+}
+
+#erroLogin {
+  color: red;
+  margin-top: 10px;
+}
+
+/* HEADER */
+header {
+  padding: 25px;
+}
+
+/* MENU TOP */
+.menuTop {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  width: fit-content;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.menuBtn {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menuBtn:hover {
+  background: rgba(255, 182, 193, 0.35);
+}
+
+/* SEÇÕES */
+.tituloSecao {
+  margin: 15px 0;
+}
+
+.btnAdd {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 182, 193, 0.6);
+  cursor: pointer;
+  margin: 8px auto;
+  display: block;
+}
+
+/* POSTS */
+.postCard {
+  background: rgba(255,255,255,0.7);
+  padding: 15px;
+  border-radius: 20px;
+  margin: 15px auto;
+  width: 85%;
+  max-width: 400px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBox {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  width: 300px;
+}
+
+.modalBox input,
+.modalBox textarea {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+}
+
+.modalBox button {
+  margin: 8px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: pink;
+}
+
+/* MOBILE AJUSTE */
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .menuTop {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .menuBtn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .postCard {
+    width: 95%;
+    max-width: 320px;
+  }
+
+  .btnAdd {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .modalBox {
+    width: 90%;
+    max-width: 320px;
+  }
+}
